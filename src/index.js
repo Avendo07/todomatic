@@ -4,9 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const todoList = [
+  {name:"EAT", done:true, id:"todo0"},
+  {name:"SLEEP", done:false, id:"todo1"},
+  {name:"REPEAT", done:false, id:"todo2"},
+];
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App todoList={todoList}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

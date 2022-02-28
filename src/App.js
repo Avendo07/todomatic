@@ -1,6 +1,11 @@
 import Todo from "./components/todo";
 
+
+
 function App(props) {
+  const todoComponentList = props.todoList.map(
+    (task, index) => <Todo name={task.name} id={task.id} done={task.done} key={task.id}/>
+  );
   return (
     <div className="todoapp stack-large">
       <h1>TodoMatic</h1>
@@ -94,12 +99,10 @@ function App(props) {
             </button>
           </div>
         </li> */}
-        <Todo name="EAT" done={true} id="todo0"/>
-        <Todo name="SLEEP" done={false} id="todo1"/>
-        <Todo name="REPEAT" done={false} id="todo2"/>
+        todoComponentList
       </ul>
     </div>
   );
 }
 
-export default App;
+export default App();
